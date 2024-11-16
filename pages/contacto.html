@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <img src="../images/brandLogo1.png" alt="Logo de Filomena Pastelera" width="200">
+        <h1>Contacto</h1>
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <li><a href="sobreNosotros.html"> Sobre Nosotros </a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="preguntasFrecuentes.html">Preguntas Frecuentes</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Contáctanos</h2>
+        
+        <!-- Sección de redes sociales -->
+        <section>
+            <h3>Síguenos en nuestras redes sociales</h3>
+            <ul>
+                <li><a href="https://www.facebook.com/FilomenaPastelera" target="_blank">Facebook</a></li>
+                <li><a href="https://www.instagram.com/filomenapastelera?igsh=bHliMHvZzl2d2Rz" target="_blank">Instagram</a></li>
+                <li><a href="https://twitter.com/FilomenaPastelera" target="_blank">Twitter</a></li>
+            </ul>
+        </section>
+
+        <!-- Formulario de contacto -->
+        <section>
+            <h3>Envíanos un mensaje</h3>
+            <form action="https://formspree.io/f/xovqerrd" method="POST">
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre" required><br><br>
+                
+                <label for="email">Correo Electrónico:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                
+                <label for="mensaje">Mensaje:</label><br>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br><br>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

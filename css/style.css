@@ -1,0 +1,298 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo del sitio */
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.8;
+    background-color: #FFF8E7;
+    color: #5A3E36; 
+    padding: 20px;
+}
+
+/* Encabezado */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #FFF8E7;
+}
+
+/* Logo */
+header img {
+    width: 100%; 
+    max-width: 400px;
+    height: auto; 
+}
+header h1 {
+    font-size: 2em;
+    color: #5A3E36;
+    font-family: 'Brush Script MT', cursive;
+}
+
+/* Nav */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #5A3E36;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+nav ul li a:hover {
+    color: #FFD700;
+}
+
+/* Main*/
+main h2 {
+    font-size: 1.5em;
+    color: #C9A7FF; 
+    margin-bottom: 15px;
+}
+
+/* sobreNosotros */
+.acerca-de {
+    display: flex;
+    justify-content: center;
+    padding: 40px 5%;
+    width: 100%;
+}
+
+/* Contenedor de la foto y la descripción */
+.perfil {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 90%; 
+    max-width: 1200px; 
+    background-color: #ffe4c4;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.perfil img {
+    width: 250px;
+    border-radius: 50%;
+    flex: 1 1 250px;
+}
+
+/* Descripción de Gaby */
+.descripcion {
+    flex: 2 1 300px;
+    text-align: center;
+    padding: 10px;
+}
+
+/* productos */
+
+/* Contenedor de productos */
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+    align-items: start;
+}
+
+/* Tarjeta */
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: auto;        
+    aspect-ratio: 9 / 32;
+    display: block;
+    margin: 0 auto;
+}
+
+.carrusel {
+    position: relative;
+    height: 550px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carrusel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    z-index: 1;
+}
+
+.carrusel img:first-child {
+    opacity: 1;
+    z-index: 2;
+}
+
+/* Activa el carrusel en hover */
+.carrusel:hover img {
+    animation: cambiarImagenes 9s infinite; /* Cambio automático al hacer hover */
+}
+
+.carrusel img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.carrusel img:nth-child(2) {
+    animation-delay: 3s;
+}
+
+.carrusel img:nth-child(3) {
+    animation-delay: 6s;
+}
+
+/* Animación para las imágenes del carrusel */
+@keyframes cambiarImagenes {
+    0%, 20% { opacity: 1; z-index: 2; }
+    30%, 100% { opacity: 0; z-index: 1; }
+}
+
+/* Descripción siempre visible */
+.descripcion {
+    padding: 15px;
+    text-align: center;
+}
+
+.descripcion h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.descripcion p {
+    font-size: 1em;
+    color: #333;
+}
+
+/*Sección preguntas frecuentes*/
+
+.faq {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+}
+
+.faq h2 {
+    font-size: 1.8rem;
+    color: #a33c3c;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #f4c2c2;
+    padding-bottom: 5px;
+}
+
+.pregunta {
+    margin-bottom: 20px;
+}
+
+.pregunta p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 10px 0;
+    color: #333;
+}
+
+.pregunta p strong {
+    color: #a33c3c;
+}
+
+/* Sección de redes sociales */
+section ul {
+    list-style-type: none;
+    padding: 10px;
+    text-align: center;
+}
+
+section ul li {
+    display: inline;
+    margin: 0 5px;
+}
+
+section ul li a {
+    color: #5A3E36;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+section ul li a:hover {
+    color: #FFD700; 
+}
+
+/* Formulario */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 2px solid #FFD700;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #5A3E36;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #C9A7FF;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #FFD700;
+    color: #5A3E36;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+form button:hover {
+    background-color: #FFC107;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #FFF8E7;
+    color: #5A3E36;
+    border-top: 2px solid #FFD700;
+} 
