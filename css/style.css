@@ -5,16 +5,25 @@
     box-sizing: border-box;
 }
 
-/* Fondo y tipografía */
+/* Fondo del sitio */
 body {
     font-family: 'Georgia', serif;
     line-height: 1.8;
-    background-color: #FFF8E7;
+    background: url('../images/fondo-textura.png') repeat;
     color: #5A3E36;
     padding: 20px;
 }
 
 /* Encabezado */
+
+main, header, footer, nav ul {
+    background-color: rgba(255, 255, 255, 0.8); /* Blanco con 80% de opacidad */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
 header {
     text-align: center;
     padding: 20px;
@@ -65,30 +74,46 @@ main {
 }
 
 /* Sobre Nosotros */
+/* Contenedor de la sección 'Acerca de Nosotros' */
 .acerca-de {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    flex-direction: column;
+    align-items: center;
     padding: 40px 5%;
-    background-color: #FFE4C4;
+    background-color: rgba(255, 248, 231, 0.8); /* Fondo semitransparente */
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-image: url('../images/fondo-textura.png'); /* Textura de fondo */
+    background-blend-mode: overlay;
+}
+
+/* Perfil: Contenedor de imagen y texto */
+.perfil {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Imagen */
 .perfil img {
-    width: 100%;
-    max-width: 250px;
+    width: 300px;
     height: auto;
     border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Texto */
 .descripcion {
     flex: 1;
-    text-align: center;
-    padding: 10px;
-    font-size: 1.1em;
+    text-align: justify;
+    font-size: 1.2em;
+    line-height: 1.8;
     color: #5A3E36;
 }
 
@@ -172,41 +197,43 @@ main {
 /* Formulario */
 
 form {
-    max-width: 600px; /* Limita el ancho del formulario */
-    margin: 0 auto; /* Centra el formulario */
+    max-width: 600px;
+    margin: 0 auto;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 2px solid #FFD700; 
     border-radius: 8px;
-    background-color: #f9f9f9; /* Fondo claro para distinguir el formulario */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+    background-color: #FFF8E7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 form label {
-    display: block; /* Coloca las etiquetas en bloques separados */
+    display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    color: #333;
+    color: #5A3E36;
 }
 
 form input, 
 form textarea, 
 form button {
-    width: 100%; /* Ajusta el ancho al contenedor */
+    width: 100%;
     padding: 10px;
     margin-bottom: 16px;
-    border: 1px solid #ccc;
+    border: 1px solid #C9A7FF; 
     border-radius: 4px;
     font-size: 16px;
-    box-sizing: border-box; /* Asegura que el padding no desborde */
+    box-sizing: border-box;
+    background-color: #FFF8E7; 
+    color: #5A3E36; 
 }
 
 form textarea {
-    resize: vertical; /* Permite redimensionar verticalmente */
+    resize: vertical;
 }
 
 form button {
-    background-color: #d4a373; /* Color del botón acorde a la temática pastel */
-    color: white;
+    background-color: #FFD700; 
+    color: #5A3E36;
     font-weight: bold;
     border: none;
     cursor: pointer;
@@ -214,8 +241,32 @@ form button {
 }
 
 form button:hover {
-    background-color: #c1855e; /* Cambio de color al pasar el cursor */
+    background-color: #FFC107; 
 }
+
+section ul {
+    list-style-type: none;
+    padding: 10px;
+    text-align: center;
+}
+
+section ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+section ul li a {
+    text-decoration: none;
+    color: #5A3E36; 
+    font-size: 2rem; 
+    transition: color 0.3s ease;
+}
+
+section ul li a:hover {
+    color: #FFD700; 
+}
+
+
 /* Footer */
 footer {
     text-align: center;
