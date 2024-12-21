@@ -98,98 +98,46 @@ main h2 {
 }
 
 /* productos */
-
-/* Contenedor de productos */
-
 .productos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
-    padding: 20px;
-    justify-items: center;
-    align-items: start;
+    justify-content: center;
+    margin: 20px;
 }
 
-/* Tarjeta */
 .tarjeta {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     border: 1px solid #ddd;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    background-color: #fff;
 }
 
-.tarjeta img {
+.tarjeta-imagen img {
     width: 100%;
-    height: auto;        
-    aspect-ratio: 9 / 32;
-    display: block;
-    margin: 0 auto;
-}
-
-.carrusel {
-    position: relative;
-    height: 550px;
-    width: 100%;
-    overflow: hidden;
-}
-
-.carrusel img {
-    width: 100%;
-    height: 100%;
+    height: 200px;
     object-fit: cover;
-    position: absolute;
-    opacity: 0;
-    transition: opacity 0.8s ease;
-    z-index: 1;
 }
 
-.carrusel img:first-child {
-    opacity: 1;
-    z-index: 2;
-}
-
-/* Activa el carrusel en hover */
-.carrusel:hover img {
-    animation: cambiarImagenes 9s infinite; /* Cambio automático al hacer hover */
-}
-
-.carrusel img:nth-child(1) {
-    animation-delay: 0s;
-}
-
-.carrusel img:nth-child(2) {
-    animation-delay: 3s;
-}
-
-.carrusel img:nth-child(3) {
-    animation-delay: 6s;
-}
-
-/* Animación para las imágenes del carrusel */
-@keyframes cambiarImagenes {
-    0%, 20% { opacity: 1; z-index: 2; }
-    30%, 100% { opacity: 0; z-index: 1; }
-}
-
-/* Descripción siempre visible */
-.descripcion {
+.tarjeta-descripcion {
     padding: 15px;
     text-align: center;
 }
 
-.descripcion h3 {
-    font-size: 1.5em;
-    margin: 10px 0;
+.btn-agregar {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #f8b400;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.descripcion p {
-    font-size: 1em;
-    color: #333;
+.btn-agregar:hover {
+    background-color: #e59400;
 }
 
 /*Sección preguntas frecuentes*/
