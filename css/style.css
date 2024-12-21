@@ -1,16 +1,16 @@
-
+/* General */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Fondo del sitio */
+/* Fondo y tipografía */
 body {
     font-family: 'Georgia', serif;
     line-height: 1.8;
     background-color: #FFF8E7;
-    color: #5A3E36; 
+    color: #5A3E36;
     padding: 20px;
 }
 
@@ -21,28 +21,28 @@ header {
     background-color: #FFF8E7;
 }
 
-/* Logo */
 header img {
-    width: 100%; 
+    width: 100%;
     max-width: 400px;
-    height: auto; 
-}
-header h1 {
-    font-size: 2em;
-    color: #5A3E36;
-    font-family: 'Brush Script MT', cursive;
+    height: auto;
 }
 
-/* Nav */
+header h1 {
+    font-size: 2.5em;
+    color: #5A3E36;
+    font-family: 'Brush Script MT', cursive;
+    margin: 10px 0;
+}
+
+/* Navegación */
 nav ul {
     list-style-type: none;
-    padding: 0;
-    margin: 0;
     display: flex;
     justify-content: center;
-}
-nav ul li {
-    margin: 0 15px;
+    gap: 20px;
+    padding: 10px;
+    background-color: #FFF8E7;
+    border-bottom: 2px solid #FFD700;
 }
 
 nav ul li a {
@@ -50,68 +50,67 @@ nav ul li a {
     color: #5A3E36;
     font-weight: bold;
     font-size: 1.1em;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
     color: #FFD700;
 }
 
-/* Main*/
-main h2 {
-    font-size: 1.5em;
-    color: #C9A7FF; 
-    margin-bottom: 15px;
+/* Sección de contenido */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
 }
 
-/* sobreNosotros */
+/* Sobre Nosotros */
 .acerca-de {
     display: flex;
-    justify-content: center;
-    padding: 40px 5%;
-    width: 100%;
-}
-
-/* Contenedor de la foto y la descripción */
-.perfil {
-    display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
-    width: 90%; 
-    max-width: 1200px; 
-    background-color: #ffe4c4;
-    padding: 30px;
+    padding: 40px 5%;
+    background-color: #FFE4C4;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .perfil img {
-    width: 250px;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
     border-radius: 50%;
-    flex: 1 1 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Descripción de Gaby */
 .descripcion {
-    flex: 2 1 300px;
+    flex: 1;
     text-align: center;
     padding: 10px;
+    font-size: 1.1em;
+    color: #5A3E36;
 }
 
-/* productos */
+/* Productos */
 .productos {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
-    justify-content: center;
     margin: 20px;
 }
 
 .tarjeta {
-    border: 1px solid #ddd;
+    background-color: #FFF;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 .tarjeta-imagen img {
@@ -129,36 +128,34 @@ main h2 {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 15px;
-    background-color: #f8b400;
+    background-color: #F8B400;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .btn-agregar:hover {
-    background-color: #e59400;
+    background-color: #E59400;
 }
 
-/*Sección preguntas frecuentes*/
-
+/* Preguntas Frecuentes */
 .faq {
     padding: 20px;
     max-width: 900px;
     margin: 0 auto;
-    font-family: 'Arial', sans-serif;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .faq h2 {
     font-size: 1.8rem;
-    color: #a33c3c;
+    color: #A33C3C;
     margin-bottom: 15px;
-    border-bottom: 2px solid #f4c2c2;
+    border-bottom: 2px solid #F4C2C2;
     padding-bottom: 5px;
-}
-
-.pregunta {
-    margin-bottom: 20px;
 }
 
 .pregunta p {
@@ -169,78 +166,74 @@ main h2 {
 }
 
 .pregunta p strong {
-    color: #a33c3c;
-}
-
-/* Sección de redes sociales */
-section ul {
-    list-style-type: none;
-    padding: 10px;
-    text-align: center;
-}
-
-section ul li {
-    display: inline;
-    margin: 0 5px;
-}
-
-section ul li a {
-    color: #5A3E36;
-    text-decoration: none;
-    font-size: 1.2em;
-}
-
-section ul li a:hover {
-    color: #FFD700; 
+    color: #A33C3C;
 }
 
 /* Formulario */
+
 form {
-    max-width: 500px;
-    margin: 0 auto;
+    max-width: 600px; /* Limita el ancho del formulario */
+    margin: 0 auto; /* Centra el formulario */
     padding: 20px;
-    background-color: #ffffff;
-    border-radius: 5px;
-    border: 2px solid #FFD700;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9; /* Fondo claro para distinguir el formulario */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
 }
 
 form label {
-    display: block;
-    margin-bottom: 5px;
+    display: block; /* Coloca las etiquetas en bloques separados */
+    margin-bottom: 8px;
     font-weight: bold;
-    color: #5A3E36;
+    color: #333;
 }
 
-form input,
-form textarea {
-    width: 100%;
+form input, 
+form textarea, 
+form button {
+    width: 100%; /* Ajusta el ancho al contenedor */
     padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #C9A7FF;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
     border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box; /* Asegura que el padding no desborde */
+}
+
+form textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
 }
 
 form button {
-    background-color: #FFD700;
-    color: #5A3E36;
-    padding: 10px 20px;
+    background-color: #d4a373; /* Color del botón acorde a la temática pastel */
+    color: white;
+    font-weight: bold;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    font-size: 1em;
+    transition: background-color 0.3s ease;
 }
 
 form button:hover {
-    background-color: #FFC107;
+    background-color: #c1855e; /* Cambio de color al pasar el cursor */
 }
-
 /* Footer */
 footer {
     text-align: center;
     margin-top: 20px;
-    padding: 10px;
+    padding: 15px;
     background-color: #FFF8E7;
     color: #5A3E36;
     border-top: 2px solid #FFD700;
-} 
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .acerca-de {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .productos {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
