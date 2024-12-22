@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="../css/style.css">
-    </head>
-    <body>
-        <header>
-            <img src="../images/brandLogo1.png" alt="logo pasteleria"
-                width="500">
-            <h1>Bienvenidos a Filomena Pastelera</h1>
-        </header>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="sobreNosotros.html"> Sobre Nosotros </a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="preguntasFrecuentes.html">Preguntas
-                        Frecuentes</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <img src="../images/brandLogo1.png" alt="logo pasteleria" width="500">
+        <h1>Bienvenidos a Filomena Pastelera</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="sobreNosotros.html"> Sobre Nosotros </a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="preguntasFrecuentes.html">Preguntas Frecuentes</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
 
-        <section class="productos">
-            <h2>Nuestros Productos</h2>
-            <div id="productos-dinamicos">
-            
-            </div>
-        </section>
+    <section class="productos">
+        <h2>Nuestros Productos</h2>
+        <div id="productos-dinamicos"></div>
+    </section>
 
-        <script src="../script/productos.js"></script>
+    <section class="carrito">
+        <h2>Tu Carrito</h2>
+        <div id="productos-carrito"></div>
+        <p id="total-carrito"></p>
+        <button id="btn-vaciar-carrito">Vaciar Carrito</button>
+    </section>
 
-    </body>
+    <script src="../script/productos.js"></script>
+</body>
 </html>
